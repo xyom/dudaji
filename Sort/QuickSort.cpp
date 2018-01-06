@@ -25,7 +25,7 @@ int pivot(vector<int>& arr, int left, int right)
 			swap(arr, i, p_index);
 		}
 	}
-	swap(arr,left,p_index);
+	swap(arr, left, p_index);
 
 	return p_index;
 
@@ -48,11 +48,19 @@ void main()
 	srand((unsigned int)time(NULL));
 
 	vector<int> arr;
+
+	printf("before sort: ");
 	for (int i = 0; i < 10; i++)
+	{
 		arr.push_back(rand() % 100);
+		printf("%d ", arr[i]);
+	}
 
 	quickSort(arr, 0, 9);
 
+	printf("\n\nafter sort: ");
 	for (int i = 0; i < 10; i++)
+	{
 		printf("%d ", arr[i]);
+	}
 }

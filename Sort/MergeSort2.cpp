@@ -62,11 +62,16 @@ void main()
 	srand((unsigned int)time(NULL));
 
 	
+	printf("before sort: ");
 	for (int i = 0; i < 10; i++)
+	{
 		arr.push_back(rand() % 100);
+		printf("%d ", arr[i]);
+	}
 
 	MergeSort(arr, 0, arr.size() - 1);
 
+	printf("\n\nafter sort: ");
 	for (int i = 0; i < 10; i++)
 		printf("%d ", arr[i]);
 }

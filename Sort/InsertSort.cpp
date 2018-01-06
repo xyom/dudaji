@@ -21,7 +21,7 @@ void InsertSort(vector<int>& arr)
 			if (arr[i] < arr[j])
 			{
 				int temp = arr[i];
-				memcpy(&arr[j+1], &arr[j], sizeof(int*) *(i - j));
+				memcpy(&arr[j + 1], &arr[j], sizeof(int*) *(i - j));
 				arr[j] = temp;
 			}
 		}
@@ -31,9 +31,14 @@ void main()
 {
 	srand((unsigned int)time(NULL));
 
+	printf("before sort: ");
 	vector<int> arr;
 	for (int i = 0; i < 10; i++)
+	{	
 		arr.push_back(rand() % 100);
+		printf("%d ", arr[i]);
+	}
+	printf("\n\nafter sort: ");
 
 	InsertSort(arr);
 

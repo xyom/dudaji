@@ -3,7 +3,7 @@
 #include<ctime>
 
 
-void BubbleSort(int* arr,int size)
+void BubbleSort(int* arr, int size)
 {
 	for (int i = 1; i < size; i++)
 	{
@@ -25,10 +25,15 @@ void main()
 	srand((unsigned int)time(NULL));
 
 	int arr[10];
+	printf("before sort: ");
 	for (int i = 0; i < 10; i++)
-		arr[i] = rand()%1000;
+	{
+		arr[i] = rand() % 1000;
+		printf("%d ", arr[i]);
+	}
+	printf("\n\nafter sort: ");
 	BubbleSort(arr, 10);
-	
+
 	for (int i = 0; i < 10; i++)
 		printf("%d ", arr[i]);
 }
